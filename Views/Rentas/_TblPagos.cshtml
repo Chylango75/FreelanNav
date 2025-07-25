@@ -1,0 +1,61 @@
+﻿@model List<MvcFreelan.Models.Rentas.Pago>
+
+<br />
+<br />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Mes Ini</th>
+            <th>Mes Fin</th>
+            <th>Pago</th>
+            <th>Fecha Cubierta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>
+                    @if (p.MesIni.Contains("sin"))
+                    {
+                        <span style="color: lightgray">
+                            @p.MesIni.Substring(0, 10)
+                        </span>
+                    }
+                    else
+                    {
+                        @p.MesIni.Substring(0, 10)
+                    }
+                </td>
+                <td>
+                    @if (p.MesFin.Contains("sin"))
+                    {
+                        <span style="color: lightgray">
+                            @p.MesFin.Substring(0, 10)
+                        </span>
+                    }
+                    else
+                    {
+                        @p.MesFin.Substring(0, 10)
+                    }
+                </td>
+                <td>
+                    @p.PagoTotal
+                </td>
+                <td>
+                    @if (p.FechaAplica.Contains("sin"))
+                    {
+                        <span style="color: lightgray">
+                            @p.FechaAplica.Substring(0, 10)
+                        </span>
+                    }
+                    else
+                    {
+                        @p.FechaAplica.Substring(0, 10)
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

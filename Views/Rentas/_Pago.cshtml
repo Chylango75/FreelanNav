@@ -1,0 +1,166 @@
+﻿<h3>Agregar Pago</h3>
+<br />
+<br />
+<div>
+    <div class="row">
+        <div class="col">
+            <dl>
+                <dt>
+                    <span>Seleccione Inquilino</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="inquiName" name="inquiName" />
+                </dd>
+            </dl>
+        </div>
+        <div class="col">
+            <dl>
+                <dt>
+                    <span>Costo Mensual</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="costoMensual" name="costoMensual" disabled />
+                </dd>
+                <dt>
+                    <span>ID</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="inquiId" name="inquiId" disabled />
+                </dd>
+                <dt>
+                    <span>Fecha Cubierta</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="fechaCubierta" name="fechaCubierta"/>
+                    <br />
+                    <span style="color: lightgray">
+                        Mes/Dia/Año
+                    </span>
+                </dd>
+                <dt></dt>
+                <dd class="col-sm-8">
+                    <input type="button" onclick="VerPagosBis()" class="btn btn-info" value="Ver Pagos" />
+                </dd>
+                <dt></dt>
+                <dd class="col-sm-8">
+                    <input type="button" onclick="AgregarPago()" class="btn btn-primary" value="Agregar Pago" />
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div id="divPagos"></div>
+
+<script>
+    $(document).ajaxSuccess(function() {
+
+         $("#inquiName").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/Rentas/InquisGetN',
+                    headers: {
+                        "RequestVerificationToken":
+                            $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    data: { "term": request.term },
+                    dataType: "json",
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.nombre,
+                                value: item.id,
+                                fecha: item.fechaCaptura,
+                                costo: item.costoMensual,
+                                activo: item.active,
+                            };
+                        }))
+                    },
+                    error: function (xhr, textStatus, error) {
+                        alert(xhr.statusText);
+                    },
+                    failure: function (response) {
+                        alert("failure " + response.responseText);
+                    }
+                });
+            },
+            select: function (e, ui) {
+                $("#inquiName").val(ui.item.label);
+                $("#inquiId").val(ui.item.value);
+                $("#costoMensual").val(ui.item.costo);
+                $("#divPagos").html('-');
+                return false;
+            },
+            minLength: 1
+        });
+
+        $( function() {
+            $( "#fechaCubierta" ).datepicker();
+        });
+    });
+
+        function VerPagosBis() {
+            let idInquilino = $('#inquiId').val();
+            if(isEmptyOrNull(idInquilino))
+                return false;
+            else {
+                $.ajax({
+                    type: "post",
+                    url: '/rentas/GetPartialPagos',
+                    data: { iden: $('#inquiId').val() },
+                    success: function (data) {
+                        $("#divPagos").html(data)
+                    },
+                });
+            }
+        }
+
+    function AgregarPago() {
+
+        let InquilinoId = $('#inquiId').val();
+        let total = $('#costoMensual').val();
+        let fechaCubierta = $('#fechaCubierta').val();
+
+        if ( isEmptyOrNull(InquilinoId)  || isEmptyOrNull(total) || isEmptyOrNull(fechaCubierta) ) {
+            alert("Verifique los datos.");
+            return;
+        }
+        else {
+            newFecha = new Date(fechaCubierta)
+
+            var serviceURL = '/Rentas/PagoAdd';
+            $.ajax({
+                url: serviceURL,
+                type: "POST",
+                data: {
+                     InquilinoId: InquilinoId
+                    ,FechaAplica: newFecha.toISOString()
+                    ,PagoTotal: total
+                },
+                success: successFunc,
+                error: errorFunc
+            });
+        }
+    }
+
+    function successFunc(data, status) {
+        alert(data);
+        if(data.includes("OK")) {
+            VerPagosBis();
+            $('#inquiName').val('');
+            $('#inquiId').val('');
+            $('#costoMensual').val('');
+            $('#fechaCubierta').val('');
+            $('#addInquilinoModal').modal('hide');
+        }
+
+    }
+
+    function errorFunc() {
+        alert('Se detectó un error');
+    }
+
+
+</script>

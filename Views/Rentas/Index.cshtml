@@ -1,0 +1,29 @@
+﻿@using MvcFreelan.Models.Rentas
+@model MdlIndex
+
+<div class="container">
+    <div class="text-center">
+        <h3>Rentas</h3>
+
+        @foreach (var btn in Model.Btns)
+        {
+            <button type="button" class="btn btn-outline-primary btnDash" onclick="@btn.Clicks">
+                @btn.Name
+            </button>
+        }
+    </div>
+
+    <hr />
+    @* @if (Model.Conn != "OK-Engarce")
+    {
+        <div class="float-end">Error Conéx</div>
+    } *@
+
+    <div id="workArea"></div>
+</div>
+
+<link href="~/css/renta.css" rel="stylesheet" />
+<script src="/js/renta.js"></script>
+
+
+

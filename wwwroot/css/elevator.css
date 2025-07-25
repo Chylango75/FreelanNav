@@ -1,0 +1,67 @@
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.tdPiso {
+    min-height: 30px;
+    min-width: 15px;
+}
+
+.building {
+    border: 1px solid lightgray;
+    width: 100px;
+}
+
+.bordered {
+    border: 1px solid lightgray;
+    margin: 10px;
+}
+
+.spaced {
+    margin: 10px;
+    padding: 10px;
+}
+
+#divButtonsElevator {
+    max-width: 400px;
+}
+
+.lowGray {
+    background-color: #EEE
+}
+
+.likeWhite {
+    background-color: #FEFEFE;
+}
+
+.minWiidth250 {
+    min-width: 250px;
+}
+
+.minWiidth150 {
+    max-width: 250px;
+}
+
+.btnCtrl {
+    min-width: 100px;
+    min-height: 30px;
+    margin: 5px;
+}
+
+#infoi {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 300px;
+    left: 250px;
+    font-size: 30px;
+    color: black;
+    background-color: #5ed71e5f;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#infoi {
+    z-index: 10;
+}

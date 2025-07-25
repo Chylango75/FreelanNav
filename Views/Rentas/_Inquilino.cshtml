@@ -1,0 +1,202 @@
+﻿@using MvcFreelan.Models.Rentas
+@model Inquilino
+
+<h4>Inquilinos</h4>
+
+
+<!-- mostrar modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addInquilinoModal">Agregar Inquilino</button>
+
+
+<div>
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col">
+            <dl>
+                <dt>
+                    <span>Buscar Inquilino</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="inquiName" name="inquiName"/>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="col">
+            <dl>
+                <dt>
+                    <span>ID</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="inquiId" name="inquiId" disabled />
+                </dd>
+
+                <dt>
+                    <span>Fecha Captura</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="inquiFCaptura" name="inquiFCaptura" disabled />
+                </dd>
+
+                <dt>
+                    <span>Costo Mensual</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="inquiCosto" name="inquiCosto" disabled />
+                </dd>
+
+                <dt>
+                    <span>Activo</span>
+                </dt>
+                <dd class="col-sm-8">
+                    <input type="text" id="inquiActivo" name="inquiActivo" disabled />
+                </dd>
+
+                <dt>
+                </dt>
+                <dd class="col-sm-8">
+                    <button type="button" id="btnVerPagos" class="btn btn-primary" onclick="VerPagos()" disabled>Ver Pagos</button>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<!-- Modal -->
+<div class="modal fade" id="addInquilinoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Inquilino</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <span>Nombre:</span>
+                <br />
+                <input type="text" id="txtNewNomre" />
+                <div style="color:lightgray">
+                    <span>[Año]-[Calle]-[Int] [Nombre]</span>
+                    <br />
+                    <span>2025-Nop-02 Juam Pérez</span>
+                    <br />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="button" onclick="AgregaInqui()" class="btn btn-primary" value="Agregar" />
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="divPagos"></div>
+
+<script>
+    $(document).ajaxSuccess(function() {
+         $("#inquiName").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/Rentas/InquisGetN',
+                    headers: {
+                        "RequestVerificationToken":
+                            $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    data: { "term": request.term },
+                    dataType: "json",
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.nombre,
+                                value: item.id,
+                                fecha: item.fechaCaptura,
+                                costo: item.costoMensual,
+                                activo: item.active,
+                            };
+                        }))
+                    },
+                    error: function (xhr, textStatus, error) {
+                        alert(xhr.statusText);
+                    },
+                    failure: function (response) {
+                        alert("failure " + response.responseText);
+                    }
+                });
+            },
+            select: function (e, ui) {
+                $("#inquiName").val(ui.item.label);
+                $("#inquiId").val(ui.item.value);
+                $("#inquiFCaptura").val(ui.item.fecha.slice(0, 10));
+                $("#inquiCosto").val(ui.item.costo);
+                $("#inquiActivo").val(ui.item.activo);
+                $("#btnVerPagos").attr("disabled", false);
+                $("#divPagos").html('');
+                return false;
+            },
+            minLength: 1
+        });
+    });
+
+    function AgregaInqui() {
+        let nombre = $('#txtNewNomre').val();
+
+        if (isEmptyOrNull(nombre)  || nombre.length < 10) {
+            alert("Error en nombre (min 10 car).");
+            return;
+        }
+        else {
+            var serviceURL = '/Rentas/InquiAdd';
+            $.ajax({
+                url: serviceURL,
+                type: "POST",
+                data: { Nombre: nombre },
+                success: successFunc,
+                error: errorFunc
+            });
+        }
+    }
+
+    function VerPagos() {
+        let num = 2005;
+        $.ajax({
+            type: "post",
+            url: '/rentas/GetPartialPagos',
+            data: { iden: $('#inquiId').val() },
+            success: function (data) {
+                $("#divPagos").html(data)
+            },
+        });
+
+    }
+
+    function successFunc(data, status) {
+        alert(data);
+
+        if(data.includes("OK")) {
+            $('#addInquilinoModal').modal('hide');
+        }
+    }
+
+    function errorFunc() {
+        debugger
+        alert('Se detectó un error');
+    }
+
+    function validateAddInqui() {
+        let nombre = $('#Nombre').val();
+
+        if(isEmptyOrNull(nombre)  || nombre.length < 10){
+            alert("Error en nombre (min 10 car).");
+            return false;
+        }
+        else{
+            $('#addInquilinoModal').modal('hide');
+            return true;
+        }
+    }
+
+
+</script>

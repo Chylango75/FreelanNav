@@ -1,0 +1,7 @@
+D:\Dev\MVC\MvcFreelan\obj\Release\net8.0\PubTmp\Out\MvcFreelan.exe
+D:\Dev\MVC\MvcFreelan\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+D:\Dev\MVC\MvcFreelan\obj\Release\net8.0\PubTmp\Out\appsettings.json
+D:\Dev\MVC\MvcFreelan\obj\Release\net8.0\PubTmp\Out\MvcFreelan.dll
+D:\Dev\MVC\MvcFreelan\obj\Release\net8.0\PubTmp\Out\MvcFreelan.deps.json
+D:\Dev\MVC\MvcFreelan\obj\Release\net8.0\PubTmp\Out\MvcFreelan.runtimeconfig.json
+D:\Dev\MVC\MvcFreelan\obj\Release\net8.0\PubTmp\Out\MvcFreelan.pdb

@@ -1,0 +1,154 @@
+﻿<style>
+    #canvas {
+        background-color: black;
+        border: 1px, solid #330000;
+    }
+</style>
+
+<canvas id="canvas">
+    Your browser does not support the HTML canvas tag.
+</canvas>
+
+<script>
+    //addEventListener("resize", (event) => { })
+    onresize = (event) => {
+        //console.log('cabviado')
+        ajustarTamanoCanvas();
+        loop();
+    }
+
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    ajustarTamanoCanvas();
+
+    var width = canvas.width;
+    var height = canvas.height;
+
+    var curDate = new Date();
+    var nextDate = new Date();
+
+    var cobbles = [];
+    let totSymbols = 150;
+    let disminuColor = 15;
+    //let degrades2 = [15, 31, 47, 63, 79, 95, 111, 127, 143, 159, 175, 191, 207, 223, 239, 255];
+    let degrades = [];
+
+    var alphabet = 'ﾐﾋｳｼﾅﾓｻﾜﾂｵｱﾎﾃﾏｹﾒｶｷﾑﾕﾗｾﾈｽﾀﾇﾍｦｲｸｺｿﾁﾌﾔﾖﾙﾚﾛﾝ'.split('');
+    var dezplHoriz = 10;
+    var speed = 10;
+    var maxCobbleSpeed = 800;
+
+    createDegrades();
+    createCobbles();
+
+    canvas.style.top = '0px';
+    canvas.style.left = '0px';
+
+    function loop() {
+
+        curDate = new Date();
+
+        if (curDate > nextDate) {
+            ctx.clearRect(0, 0, width, height);
+
+            printTail();
+            printCobbles();
+            increaseCobblesHeight(curDate, nextDate);
+
+            nextDate = new Date();
+            nextDate.addMillisecs(speed);
+        }
+        requestAnimationFrame(loop);
+    }
+
+    requestAnimationFrame(loop);
+
+
+    //////////////////////     LOOP FUNCTIONS     ////////////////////
+
+    function createCobbles() {
+        for (i = 0; i < totSymbols; i++) {
+            var xChar = getRandomInt(alphabet.length);
+            var lastDate = new Date();
+            var newCobble = {
+                'x': getRandomInt(width),
+                'y': getRandomInt(height),
+                'char': alphabet[xChar],
+                'speed': getRandomInt(maxCobbleSpeed),
+                'lastDate': lastDate
+            }
+            cobbles.push(newCobble);
+        }
+    }
+
+    function increaseCobblesHeight(curDate) {
+        for (i = 0; i < cobbles.length; i++) {
+            var cob = cobbles[i];
+
+            if (curDate > cob.lastDate) {
+                cob.lastDate.addMillisecs(cob.speed);
+                if (cob.y - (dezplHoriz * (degrades.length - 2)) > height)
+                    cob.y = 0;
+                else
+                    cob.y += 10;
+            }
+        }
+    }
+
+    function printCobbles() {
+        ctx.font = "bold 15px arial";
+        ctx.globalAlpha = 0.9;
+        for (i = 0; i < cobbles.length; i++) {
+            var cob = cobbles[i];
+            // ctx.fillStyle = 'rgb(0, 255, 0) ';
+            ctx.fillStyle = 'rgb(220, 255, 220) ';
+            ctx.fillText(cob.char, cob.x, cob.y);
+        }
+    }
+
+    function printTail() {
+        for (var i = 0; i < cobbles.length; i++) {
+            var cob = cobbles[i];
+            altura = cob.y;
+            for (var j = 0; j < degrades.length; j++) {
+                //glow
+                ctx.globalAlpha = 0.1;
+                ctx.font = "bold 25px arial";
+                ctx.fillStyle = 'rgb(0, ' + degrades[j] + ', 0) ';
+                let altura2 = altura;
+                ctx.fillText('◍', cob.x -8, altura2 + 5);
+
+                // Tail
+                ctx.globalAlpha = 0.9;
+                ctx.font = "bold 15px arial";
+                ctx.fillStyle = 'rgb(0, ' + degrades[j] + ', 0) ';
+                ctx.fillText(cob.char, cob.x, altura -= dezplHoriz);
+            }
+        }
+    }
+
+    /////////////////  xTra functions    /////////////////
+
+    function createDegrades() {
+        for (var i = 0; i < disminuColor; i++) {
+            var degs = Math.floor(255 / disminuColor);
+            degrades.push(255 - (i * degs))
+        }
+    }
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    Date.prototype.addMillisecs = function (d) {
+        this.setTime(this.getTime() + (d));
+        return this;
+    }
+
+    function ajustarTamanoCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+</script>

@@ -1,0 +1,154 @@
+﻿@using MvcFreelan.Models.Forklift;
+
+@model MdlIndex;
+
+@{
+    ViewData["Title"] = "Elevator";
+}
+
+<div class="container">
+    <h3>Elevator </h3>
+    <p>Simulation of an elevater being requested in a building.</p>
+    <hr />
+</div>
+
+<div class="container">
+    <div class="row bordered lowGray">
+        <div class="row">
+            <div class="col">
+                <div class="row lowGray">
+                    <div class="col bordered likeWhite">
+                        <h5>Buttons to request elevator</h5>
+                        <div id="infoi">
+                            <span>Press blue buttons to start</span>
+                        </div>
+                        <table>
+                            @for (int i = Model.maxFloor; i > 0; i--)
+                            {
+                                <tr class="bordered">
+                                    <td class="tdPiso">Floor @i</td>
+                                    <td style="width: 15px">&nbsp;</td>
+                                    @if (i == Model.maxFloor || i == Model.minFloor)
+                                    {
+                                        <td>&nbsp;</td>
+                                        <td><input type="button" class="btn btn-primary btn-sm" value="Req" onclick="reqFromBuilding(@i)" /></td>
+                                        <td>&nbsp;</td>
+                                    }
+                                    else
+                                    {
+                                        <td><input type="button" class="btn btn-primary btn-sm" value="Up" onclick="reqFromBuilding(@i+ 'U' )" /></td>
+                                        <td>&nbsp;</td>
+                                        <td><input type="button" class="btn btn-primary btn-sm" value="Down" onclick="reqFromBuilding(@i + 'D' )" /></td>
+                                    }
+                                </tr>
+                                <tr><td>&nbsp;</td></tr>
+                            }
+                        </table>
+                        <div class="spaced">
+                            <input type="text" id="txtReqsBuilding" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bordered likeWhite spaced" style="background-color: azure">
+                    <h5>Ubication of the Elevator</h5>
+                    <div id="partialBuilding">@await Html.PartialAsync("_DrawBuilding", new Ubica(1, false))</div>
+                    <br />
+                    <h5>Buttons inside elevator</h5>
+                    <div>
+                        @for (int i = @Model.minFloor; i <= @Model.maxFloor; i++)
+                        {
+                            <span style="padding-right: 10px">
+                                <input type="button" class="btn btn-info btn-sm" value="@i" onclick="reqFromElevator(@i)" />
+                            </span>
+                        }
+                        <br /><br />
+                        <input type="text" id="txtReqsElevator" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row bordered lowGray">
+        <div class="col-sm spaced">
+            <h5>Requests History</h5>
+            <textarea type="text" id="txtReqsAll" rows="2" cols="65"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row bordered lowGray">
+        <div class="col bordered likeWhite">
+            <h5>Status</h5>
+            <table>
+                <tr>
+                    <td>Current Floor</td>
+                    <td><input type="text" id="txtCurrentFloor" value="1" disabled /><br /></td>
+                </tr>
+                <tr>
+                    <td>Is Moving Up?</td>
+                    <td><input type="text" id="txtMovingUp" value="true" disabled /><br /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Next Floors</td>
+                    <td><input type="text" id="txtNextFloors" /><br /></td>
+                </tr>
+                <tr>
+                    <td>Open Door</td>
+                    <td><input type="text" id="txtOpenDoors" /><br /></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col">
+            <div class="col bordered minWiidth150 likeWhite" id="btnsControl">
+                <h5>Code Control</h5>
+                <input type="button" class="btn btnCtrl btn-sm btn-warning" onclick="elevatorMove()" value="Launch" /><br />
+                <input type="button" class="btn btnCtrl btn-sm btn-warning" onclick="elevatorStop()" value="Stop" /><br />
+                <input type="button" class="btn btnCtrl btn-sm btn-warning" onclick="Go()" value="Step by Step" /><br />
+                * This app autostarts; press "Stop" and then go step by step.
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div>
+    <div class="container">
+        <div class="row">
+           
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/js/elevator.js"></script>
+<link href="~/css/elevator.css" rel="stylesheet" />
+
+<script>
+    const messager = setInterval(tmrMessage, 1500);
+
+    function tmrMessage() {
+      $('#infoi').fadeToggle(500);
+    }
+
+    addEventListener("click", (event) => { })
+
+    onclick = (event) => {
+        clearInterval(messager);
+        $('#infoi').hide();
+    }
+
+
+</script>

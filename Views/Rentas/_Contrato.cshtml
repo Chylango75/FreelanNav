@@ -1,0 +1,308 @@
+﻿@using MvcFreelan.Models.Rentas
+@model Contrato
+
+<h4>Contratos</h4>
+
+<div>
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col">
+            <dt>
+                <span>Buscar Contrato</span>
+            </dt>
+            <dd class="col-sm-8">
+                <input type="text" id="nombreInqui" name="nombreInqui" style="min-width: 300px" />
+            </dd>
+        </div>
+
+        <div class="col">
+            <dt>
+                <span>ID Contrato</span>
+            </dt>
+            <dd class="col-sm-8">
+                <input type="text" id="contratoId" name="contratoId" disabled />
+            </dd>
+
+            <dt>
+                <span>ID Inquilino</span>
+            </dt>
+            <dd class="col-sm-8">
+                <input type="text" id="inquilinoId" name="inquilinoId" disabled />
+            </dd>
+
+            <dt>
+                <span>Mes Inicio</span>
+            </dt>
+            <dd class="col-sm-8">
+                <input type="text" id="mesIni" name="mesIni" disabled />
+            </dd>
+
+            <dt>
+                <span>Mes Fin</span>
+            </dt>
+            <dd class="col-sm-8">
+                <input type="text" id="mesFin" name="mesFin" disabled />
+            </dd>
+
+            <dt>
+                <span>Costo Mensual</span>
+            </dt>
+            <dd class="col-sm-8">
+                <input type="text" id="costoMensual" name="costoMensual" disabled />
+            </dd>
+
+            <dt>
+                <span>Num. Contrato</span>
+            </dt>
+            <dd class="col-sm-8">
+                <input type="text" id="numContrato" name="numContrato" disabled />
+            </dd>
+
+            <dt>
+                <span>Fecha Creacion</span>
+            </dt>
+            <dd class="col-sm-8">
+                <input type="text" id="fechaCreacion" name="fechaCreacion" disabled />
+            </dd>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+
+<span>Seleccione inquilino para agregar contrato.</span>
+<br />
+<input type="text" id="inquiNameContrato" style="min-width: 250px" />
+<span style="padding-left: 20px">
+    <input type="text" id="inquiIdContrato" style="max-width: 60px" disabled />
+</span>
+<br />
+<br />
+
+<!-- mostrar modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContratoModal">Agregar Contrato</button>
+
+<!-- Modal -->
+<div class="modal fade" id="addContratoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Contrato</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <span>Inquilino:</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <span id="lblInquilinoContrato">(Seleccione Inquilino)</span>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <span>Fecha Inicio</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" id="fechaIniNew">
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <span>Num. Contrato:</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" id="numContratoNew">
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <span>Costo Mensual:</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="number" id="costoMensualNew">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="button" onclick="AgregaContrato()" class="btn btn-primary" value="Agregar" />
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ajaxSuccess(function() {
+
+        $("#nombreInqui").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/Rentas/ContratosGetN',
+                    headers: {
+                        "RequestVerificationToken":
+                            $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    data: { "term": request.term },
+                    dataType: "json",
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.nombreInqui,
+                                value: item.numContrato,
+                                contratoId: item.contratoId,
+                                costoMensual: item.costoMensual,
+                                fechaCreacion: item.fechaCreacion,
+                                inquilinoId: item.inquilinoId,
+                                mesFin: item.mesFin,
+                                mesIni:item.mesIni,
+                                numContrato:item.numContrato,
+                            };
+                        }))
+                    },
+                    error: function (xhr, textStatus, error) {
+                        alert(xhr.statusText);
+                    },
+                    failure: function (response) {
+                        alert("failure " + response.responseText);
+                    }
+                });
+            },
+            select: function (e, ui) {
+                $("#contratoId").val(ui.item.contratoId);
+                $("#costoMensual").val(ui.item.costoMensual);
+                $("#fechaCreacion").val(ui.item.fechaCreacion.slice(0, 10));
+                $("#inquilinoId").val(ui.item.inquilinoId);
+                $("#mesFin").val(ui.item.mesFin.slice(0, 10));
+                $("#mesIni").val(ui.item.mesIni.slice(0, 10));
+                $("#nombreInqui").val(ui.item.label);
+                $("#numContrato").val(ui.item.numContrato);
+                return false;
+            },
+            minLength: 1
+        });
+
+        $("#inquiNameContrato").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/Rentas/InquisSinContrato',
+                    headers: {
+                        "RequestVerificationToken":
+                            $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    data: { "term": request.term },
+                    dataType: "json",
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.nombre,
+                                value: item.id
+                            };
+                        }))
+                    },
+                    error: function (xhr, textStatus, error) {
+                        alert(xhr.statusText);
+                    },
+                    failure: function (response) {
+                        alert("failure " + response.responseText);
+                    }
+                });
+            },
+            select: function (e, ui) {
+                $('#lblInquilinoContrato').text(ui.item.label)
+                $("#inquiNameContrato").val(ui.item.label);
+                $("#inquiIdContrato").val(ui.item.value);
+                return false;
+            },
+            minLength: 1
+        });
+
+        $( function() {
+            $( "#fechaIniNew" ).datepicker();
+        });
+    });
+
+    function AgregaContrato() {
+        let InquilinoId = $('#inquiIdContrato').val();
+        let fechaIni = $('#fechaIniNew').val();
+        let NumContrato = $('#numContratoNew').val();
+        let CostoMensual = $('#costoMensualNew').val();
+
+        if(    isEmptyOrNull(InquilinoId)  || isEmptyOrNull(fechaIni)
+            || isEmptyOrNull(NumContrato)  || isEmptyOrNull(CostoMensual)
+        ){
+            alert("Error en Datos.");
+            return;
+        }
+        else {
+            newFecha = new Date(fechaIni)
+
+            var serviceURL = '/Rentas/ContratoAdd';
+            $.ajax({
+                url: serviceURL,
+                type: "POST",
+                data: { 
+                     InquilinoId: InquilinoId
+                    ,MesIni: newFecha.toISOString()
+                    ,NumContrato: NumContrato
+                    ,CostoMensual: CostoMensual
+                },
+                success: successFunc,
+                error: errorFunc
+            });
+        }
+    }
+
+    function successFunc(data, status) {
+        alert(data);
+
+        if(data.includes("OK")) {
+            $('#inquiNameContrato').val('');
+            $('#inquiIdContrato').val('');
+            $('#addContratoModal').modal('hide');
+        }
+    }
+
+    function errorFunc() {
+        debugger
+        alert('Se detectó un error');
+    }
+
+    function validateAddInqui() {
+        let nombre = $('#Nombre').val();
+
+        if(isEmptyOrNull(nombre)  || nombre.length < 10){
+            alert("Error en nombre (min 10 car).");
+            return false;
+        }
+        else{
+            $('#addInquilinoModal').modal('hide');
+            return true;
+        }
+    }
+
+
+</script>

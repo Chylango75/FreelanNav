@@ -1,0 +1,46 @@
+﻿@using MvcFreelan.GlobalVariables;
+@using MvcFreelan.Models.Forklift;
+
+@model Ubica;
+
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col">
+            <div class="building text-center">
+                <table>
+                    @for (int i = Info.maxFloor; i >= Info.minFloor; i--)
+                    {
+                        <tr>
+                            @if (i == @Model.NumPiso)
+                            {
+                                if (Model.OpenDoors)
+                                {
+                                    <td class="tdPiso">
+                                        Floor @i &nbsp;
+                                        @* <input type="button" class="btn btn-success" value="*" /> *@
+                                        <img src="/pics/elevatorOpen.png" />
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td class="tdPiso">
+                                        Floor @i &nbsp;
+                                        @* <input type="button" value="*" class="btn btn-warning" /> *@
+                                        <img src="/pics/elevatorClose.png" />
+                                    </td>
+                                }
+                            }
+                            else
+                            {
+                                <td class="tdPiso">
+                                    Floor @i &nbsp;
+                                    <input type="button" disabled value="&nbsp; &nbsp;" />
+                                </td>
+                            }
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
