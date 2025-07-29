@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZW5lQ1YuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Renn/Dev/MVC/MvcFreelan/Views/QR/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUVJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Renn/Dev/MVC/MvcFreelan/Views/Rentas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,10 +82,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Renn/Dev/MVC/MvcFreelan/Views/Shared/_DrawBuilding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EcmF3QnVpbGRpbmcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Renn/Dev/MVC/MvcFreelan/Views/Shared/_Students.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHVkZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Renn/Dev/MVC/MvcFreelan/Views/Shared/_ValidationScriptsPartial.cshtml]

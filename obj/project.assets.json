@@ -1558,6 +1558,18 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
         }
       },
+      "QRCoder/1.4.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/QRCoder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/QRCoder.dll": {}
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -4929,6 +4941,21 @@
         "nuget.versioning.nuspec"
       ]
     },
+    "QRCoder/1.4.1": {
+      "sha512": "W8KwCwsOJe9SI7Cm7XeIMawd08F/US6xNw34lg2Qnx6m7GYYakxbyBQaNoW1Q75oJOmX/32sJUZr6Cix2B6GUQ==",
+      "type": "package",
+      "path": "qrcoder/1.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/QRCoder.dll",
+        "lib/net40/QRCoder.dll",
+        "lib/netstandard1.1/QRCoder.dll",
+        "lib/netstandard2.0/QRCoder.dll",
+        "qrcoder.1.4.1.nupkg.sha512",
+        "qrcoder.nuspec"
+      ]
+    },
     "runtime.native.System.Data.SqlClient.sni/4.4.0": {
       "sha512": "A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==",
       "type": "package",
@@ -5831,6 +5858,7 @@
     "net8.0": [
       "Microsoft.AspNet.WebPages >= 3.3.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
+      "QRCoder >= 1.4.1",
       "System.Data.SqlClient >= 4.9.0"
     ]
   },
@@ -5891,6 +5919,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.7, )"
+          },
+          "QRCoder": {
+            "target": "Package",
+            "version": "[1.4.1, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",

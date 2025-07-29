@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\controllers\\rentascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\rentascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\qr\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\qr\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\rentas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\rentas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\controllers\\qr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\qr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\home\\renecv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\home\\renecv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 266,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Rentas\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rentas\\Index.cshtml",
-              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Rentas\\Index.cshtml",
-              "RelativeToolTip": "Views\\Rentas\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\QR\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\QR\\Index.cshtml",
+              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\QR\\Index.cshtml",
+              "RelativeToolTip": "Views\\QR\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-24T22:04:41.445Z"
+              "WhenOpened": "2025-07-29T21:23:15.129Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RentasController.cs",
-              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Controllers\\RentasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RentasController.cs",
-              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Controllers\\RentasController.cs",
-              "RelativeToolTip": "Controllers\\RentasController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "QR.cs",
+              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Controllers\\QR.cs",
+              "RelativeDocumentMoniker": "Controllers\\QR.cs",
+              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Controllers\\QR.cs",
+              "RelativeToolTip": "Controllers\\QR.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T21:58:38.626Z"
+              "WhenOpened": "2025-07-29T21:22:57.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReneCV.cshtml",
+              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Home\\ReneCV.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ReneCV.cshtml",
+              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Home\\ReneCV.cshtml",
+              "RelativeToolTip": "Views\\Home\\ReneCV.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwDEAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T21:17:15.506Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-24T21:46:07.469Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-29T21:15:10.458Z",
               "EditorCaption": ""
             }
           ]

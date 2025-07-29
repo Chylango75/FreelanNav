@@ -3,6 +3,8 @@ wwwroot\css\renta.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\elevator.js
+wwwroot\js\qr-reader.js
+wwwroot\js\readerQR.js
 wwwroot\js\renta.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

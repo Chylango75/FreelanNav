@@ -1,21 +1,52 @@
-﻿<style>
+﻿@{
+    Layout = null;
+}
+
+<style>
+    body {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
     #canvas {
         background-color: black;
-        border: 1px, solid #330000;
+    }
+    .absolute-div {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        width: 50px;
+        height: 30px;
+        background-color: black;
+        color:limegreen
+    }
+    a {
+        color: limegreen;
+    }
+    a:visited {
+        color: limegreen;
     }
 </style>
 
-<canvas id="canvas">
-    Your browser does not support the HTML canvas tag.
-</canvas>
+<html>
+<body>
+    <canvas id="canvas">
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+    <div class="absolute-div">
+        <a class="nav-link text-dark" href="/Home/Index">Home</a>
+    </div>
 
 <script>
-    //addEventListener("resize", (event) => { })
-    onresize = (event) => {
-        //console.log('cabviado')
-        ajustarTamanoCanvas();
-        loop();
+    window.addEventListener('resize', handleWindowResize);
+
+    function handleWindowResize() {
+        location.reload();
     }
+
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
 
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -150,5 +181,7 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
-
 </script>
+
+</body>
+</html>

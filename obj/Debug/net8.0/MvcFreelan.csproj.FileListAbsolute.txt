@@ -509,10 +509,11 @@ C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\staticwebassets.build.json
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\staticwebassets.development.json
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\MvcFreelan.csproj.Up2Date
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\MvcFreelan.dll
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\refint\MvcFreelan.dll
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\MvcFreelan.pdb
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\MvcFreelan.genruntimeconfig.cache
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\ref\MvcFreelan.dll
+C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\MvcFreelan.sourcelink.json
+C:\Renn\Dev\MVC\MvcFreelan\bin\Debug\net8.0\QRCoder.dll

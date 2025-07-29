@@ -1,0 +1,47 @@
+﻿<h2>Generador de Código QR</h2>
+
+<form id="formGenerarQR">
+    <input type="text" name="texto" id="textoQR" placeholder="Texto para el QR" required />
+    <button type="submit">Generar QR</button>
+</form>
+
+<div id="qrImagen"></div>
+
+<hr />
+
+<h2>Lector de Código QR</h2>
+<div id="reader" style="width:300px"></div>
+<input type="button" value="Iniciar Lector" onclick="ReiniciaLectura()" />
+<div id="resultado"></div>
+
+<form method="post">
+    @Html.AntiForgeryToken()
+</form>
+
+@if (Context.Request.Query.ContainsKey("texto"))
+{
+    <h3>Resultado:</h3>
+    <img src="@Url.Action("GenerarQR", "QR", new { texto = Context.Request.Query["texto"] })" alt="QR generado" />
+}
+
+@section Scripts {
+    <script>
+        document.getElementById('formGenerarQR').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const texto = document.getElementById('textoQR').value;
+            const url = '@Url.Action("GenerarQR", "QR")' + '?texto=' + encodeURIComponent(texto);
+            document.getElementById('qrImagen').innerHTML = '<img src="' + url + '" alt="QR generado" />';
+        });
+    </script>
+
+    <script src="~/js/readerqr.js"></script>
+    <script src="~/js/qr-reader.js"></script>
+    <script>
+        function ReiniciaLectura() {
+            iniciarLectorQR("reader", function(qrCodeMessage) {
+                document.getElementById("resultado").innerText = "Código QR: " + qrCodeMessage;
+            });
+        }
+
+    </script>
+}

@@ -17,85 +17,85 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MvcFreelan
 build_property.RootNamespace = MvcFreelan
-build_property.ProjectDir = C:\Renn\Dev\MvcFreelan\
+build_property.ProjectDir = C:\Renn\Dev\MVC\MvcFreelan\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Renn\Dev\MvcFreelan
+build_property.MSBuildProjectDirectory = C:\Renn\Dev\MVC\MvcFreelan
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Elevator/Index.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Elevator/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxldmF0b3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Home/Index.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Home/MotSeg.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Home/MotSeg.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb3RTZWcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Home/Mtrx.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Home/Mtrx.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNdHJ4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Home/ReneCV.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Home/ReneCV.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZW5lQ1YuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Rentas/Index.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/QR/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUVJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Rentas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Rentas/_Contrato.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Rentas/_Contrato.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFzXF9Db250cmF0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Rentas/_Inquilino.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Rentas/_Inquilino.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFzXF9JbnF1aWxpbm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Rentas/_Pago.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Rentas/_Pago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFzXF9QYWdvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Rentas/_Reportes.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Rentas/_Reportes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFzXF9SZXBvcnRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Rentas/_TblPagos.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Rentas/_TblPagos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudGFzXF9UYmxQYWdvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Shared/Error.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Shared/_DrawBuilding.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Shared/_DrawBuilding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EcmF3QnVpbGRpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Shared/_Students.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHVkZW50cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Renn/Dev/MvcFreelan/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/_ViewImports.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/_ViewStart.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Renn/Dev/MvcFreelan/Views/Shared/_Layout.cshtml]
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-j5hktqflvi

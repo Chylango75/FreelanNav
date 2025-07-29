@@ -23,7 +23,7 @@ function Go() {
     // Send data to process
     $.ajax({
         type: "post",
-        url: "/Home/Go",
+        url: "/Elevator/Go",
         data: { worklift: worklift },
         success: function (data) {
 
@@ -47,7 +47,7 @@ function DrawFloor() {
 
     $.ajax({
         type: "post",
-        url: "/Home/DrawBuilding?"
+        url: "/Elevator/DrawBuilding?"
             + "piso=" + $('#txtCurrentFloor').val()
             + '&OpenDoors=' + _openDoors
             + '&nextFloors=' + nextFloors,
