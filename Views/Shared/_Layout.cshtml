@@ -4,15 +4,50 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MvcFreelan</title>
-    
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="~/css/jquery-ui.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     
     <link rel="stylesheet" href="~/MvcFreelan.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">M.Sc. René Montoya</a>
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav"
+                    style="color:black; background-color:#2c3e50" value="☰">
+                <span class="navbar-toggler-icon" style="filter: invert(1);">☰</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="QR" asp-action="Index" >QR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Elevator" asp-action="Index">Elevator</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="ReneCV">CV-René</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="MotSeg">Mot-Seg</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Mtrx">ScreenSaver</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+@*     <header>
         <div class="container">
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -33,7 +68,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Mtrx">Screen-Saver</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ReneCV">René-CV</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ReneCV">CV-René</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="MotSeg">Mot-Seg</a>
@@ -46,24 +81,36 @@
             </div>
             </nav>
         </div>
-    </header>
+    </header> *@
+
     @* <div class="container" style="border: 1px solid red;"> *@
     <div>
-        <div class="container">
+        
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
-        </div>
+        
     </div>
 
-    <footer class="border-top footer text-muted">
+@*     <footer class="border-top footer text-muted">
         <div class="container text-center">
             &copy; 2025 - René
         </div>
     </footer>
+ *@
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2025 René. All rights reserved..
+            </p>
+        </div>
+    </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

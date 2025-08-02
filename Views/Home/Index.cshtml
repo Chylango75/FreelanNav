@@ -1,11 +1,42 @@
-﻿:´)
+﻿    <!-- Sección principal -->
+<section class="hero">
+    <div class="container">
+        <h1 class="display-5">Welcome to MyCompany</h1>
+        <p class="lead">Professional solutions to boost your business</p>
+        <a asp-controller="Home" asp-action="ReneCV" class="btn btn-outline-light mt-3" style="color: white;" onmouseover="this.style.color='black';" onmouseout="this.style.color='white';">Meet Me</a>
+    </div>
+</section>
 
-
-
-
-<br />
-<br />
-<br />
+<!-- Contenido adicional -->
+<section class="container my-5">
+    <h2 class="section-title mb-4">My Services</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Consulting</h5>
+                    <p class="card-text">I provide strategic advice to improve your company's performance.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Web Development</h5>
+                    <p class="card-text">I create professional and adaptable digital platforms.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Marketing Digital</h5>
+                    <p class="card-text">Boost your online presence with effective strategies..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <p style="color:lightgray" class="fixed-bottom">
     @ViewBag.resp

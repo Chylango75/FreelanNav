@@ -45,5 +45,27 @@ namespace MvcFreelan.Controllers
                 return File(stream.ToArray(), "image/png");
             }
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SrvEncrypt(string textoEncrypt)
+        {
+            string result = string.Empty;
+            byte[] encryted = System.Text.Encoding.Unicode.GetBytes(textoEncrypt);
+            result = Convert.ToBase64String(encryted);
+            var resultado = $"{result}";
+            return Json(new { resultado });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SrvDecrypt(string textoDecrypt)
+        {
+            string result = string.Empty;
+            byte[] decryted = Convert.FromBase64String(textoDecrypt);
+            result = System.Text.Encoding.Unicode.GetString(decryted);
+            var resultado = $"{result}";
+            return Json(new { resultado });
+        }
     }
 }

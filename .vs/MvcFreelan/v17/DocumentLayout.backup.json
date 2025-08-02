@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\home\\renecv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\home\\renecv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\qr\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\qr\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\controllers\\qr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\qr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\home\\renecv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\home\\renecv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|c:\\renn\\dev\\mvc\\mvcfreelan\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,55 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 266,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\QR\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\QR\\Index.cshtml",
-              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\QR\\Index.cshtml",
-              "RelativeToolTip": "Views\\QR\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-29T21:23:15.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QR.cs",
-              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Controllers\\QR.cs",
-              "RelativeDocumentMoniker": "Controllers\\QR.cs",
-              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Controllers\\QR.cs",
-              "RelativeToolTip": "Controllers\\QR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T21:22:57.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ReneCV.cshtml",
               "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Home\\ReneCV.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\ReneCV.cshtml",
               "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Home\\ReneCV.cshtml",
               "RelativeToolTip": "Views\\Home\\ReneCV.cshtml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwDEAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowDUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-29T21:17:15.506Z"
+              "WhenOpened": "2025-08-02T06:32:45.399Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-02T06:15:26.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-29T21:15:10.458Z",
+              "WhenOpened": "2025-08-02T05:33:02.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-02T05:30:09.648Z",
               "EditorCaption": ""
             }
           ]

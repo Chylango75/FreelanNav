@@ -517,3 +517,4 @@ C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\MvcFreelan.genruntimeconfig.cache
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\ref\MvcFreelan.dll
 C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\MvcFreelan.sourcelink.json
 C:\Renn\Dev\MVC\MvcFreelan\bin\Debug\net8.0\QRCoder.dll
+C:\Renn\Dev\MVC\MvcFreelan\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

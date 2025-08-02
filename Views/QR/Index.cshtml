@@ -1,22 +1,79 @@
-﻿<h2>Generador de Código QR</h2>
+﻿<style>
+    .txt-qr {
+        min-width: 300px;
+    }
+</style>
 
-<form id="formGenerarQR">
-    <input type="text" name="texto" id="textoQR" placeholder="Texto para el QR" required />
-    <button type="submit">Generar QR</button>
-</form>
-
-<div id="qrImagen"></div>
-
+<div class="container">
+    <h3 class="text-center">QR Generate/Read</h3>
+    <br />
+    <h4>QR Code Generator </h4>
+    <form id="formGenerarQR">
+        <input type="text" name="texto" id="textoQR" placeholder="Text to QR" required  class="txt-qr"/>
+        <button type="submit" class="btn btn-sm btn-success">Generate QR</button>
+        <div id="qrImagen"></div>
+    </form>
+    <br />
+    <br />
+    <br />
+    <h4>QR Code Reader</h4>
+    <input type="button" value="Start Reader" onclick="ReiniciaLectura()" class="btn btn-sm btn-success" />
+    <br />
+    <br />
+    <div id="reader" style="width:300px"></div>
+    <div id="resultado"></div>
+</div>
 <hr />
+<div class="container">
+    <div>
+        <h3 class="text-center">Encrypter</h3>
+        <h4>Text Encrypter</h4>
+        <form id="frmEncrypt">
+            <input type="text" name="textoEncrypt" id="textoEncrypt" placeholder="Texto to encrypt" required class="txt-qr" />
+            <br /><br />
+            <div id="resultEncrypt"></div>
+            <br />
+            <button type="submit" class="btn btn-sm btn-success">Encrypt</button>
+            <br /><br />
+            @Html.AntiForgeryToken()
+        </form>
+        Method:<br />
+        string result = string.Empty;<br />
+        byte[] encryted = System.Text.Encoding.Unicode.GetBytes(_cadenaAencriptar);<br />
+        result = Convert.ToBase64String(encryted);
+    </div>
 
-<h2>Lector de Código QR</h2>
-<div id="reader" style="width:300px"></div>
-<input type="button" value="Iniciar Lector" onclick="ReiniciaLectura()" />
-<div id="resultado"></div>
+    <hr />
 
-<form method="post">
+    <div>
+        <h4>Text Decrypter</h4>
+        <form id="frmDecrypt">
+            <input type="text" 
+                    name="textoDecrypt" 
+                    id="textoDecrypt" 
+                    placeholder="Texto to decrypt"
+                    value="UgBlAG4A6QAgAE0AbwBuAHQAbwB5AGEA"
+                    required 
+                    class="txt-qr" />
+            <br /><br />
+            <div id="resultDecrypt"></div>
+            <br />
+            <button type="submit" class="btn btn-sm btn-success">Decrypt</button>
+            <br /><br />
+            @Html.AntiForgeryToken()
+        </form>
+        Method:<br />
+        string result = string.Empty;<br />
+        byte[] decryted = Convert.FromBase64String(_cadenaAdesencriptar);<br />
+        result = System.Text.Encoding.Unicode.GetString(decryted);
+    </div>
+    
+</div>
+
+@* <form method="post">
     @Html.AntiForgeryToken()
 </form>
+ *@
 
 @if (Context.Request.Query.ContainsKey("texto"))
 {
@@ -32,11 +89,49 @@
             const url = '@Url.Action("GenerarQR", "QR")' + '?texto=' + encodeURIComponent(texto);
             document.getElementById('qrImagen').innerHTML = '<img src="' + url + '" alt="QR generado" />';
         });
-    </script>
 
-    <script src="~/js/readerqr.js"></script>
-    <script src="~/js/qr-reader.js"></script>
-    <script>
+
+        //  Form to decrypt
+        document.getElementById('frmDecrypt').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const textoDecrypt = document.getElementById('textoDecrypt').value;
+            const token = document.querySelector('#frmDecrypt input[name="__RequestVerificationToken"]').value;
+
+            const response = await fetch('@Url.Action("SrvDecrypt", "QR")', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'RequestVerificationToken': token
+                },
+                body: `textoDecrypt=${encodeURIComponent(textoDecrypt)}&__RequestVerificationToken=${encodeURIComponent(token)}`
+            });
+            
+            const data = await response.json();
+
+            document.getElementById('resultDecrypt').innerText = data.resultado;
+        });
+
+          //  Form for encrypting
+        document.getElementById('frmEncrypt').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const textoEncrypt = document.getElementById('textoEncrypt').value;
+            const token = document.querySelector('#frmEncrypt input[name="__RequestVerificationToken"]').value;
+
+            const response = await fetch('@Url.Action("SrvEncrypt", "QR")', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'RequestVerificationToken': token
+                },
+                body: `textoEncrypt=${encodeURIComponent(textoEncrypt)}&__RequestVerificationToken=${encodeURIComponent(token)}`
+            });
+
+            const data = await response.json();
+            document.getElementById('resultEncrypt').innerText = data.resultado;
+        });
+
         function ReiniciaLectura() {
             iniciarLectorQR("reader", function(qrCodeMessage) {
                 document.getElementById("resultado").innerText = "Código QR: " + qrCodeMessage;
@@ -44,4 +139,7 @@
         }
 
     </script>
+
+    <script src="~/js/readerqr.js"></script>
+    <script src="~/js/qr-reader.js"></script>
 }
