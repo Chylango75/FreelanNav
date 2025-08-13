@@ -4,8 +4,14 @@
     }
 </style>
 
+<section class="hero">
+    <p class="lead">
+        <h4>QR Generator / QR Reader</h4>
+    </p>
+</section>
+
 <div class="container">
-    <h3 class="text-center">QR Generate/Read</h3>
+    <h3 class="text-center"></h3>
     <br />
     <h4>QR Code Generator </h4>
     <form id="formGenerarQR">
@@ -22,11 +28,19 @@
     <br />
     <div id="reader" style="width:300px"></div>
     <div id="resultado"></div>
+    <br />
 </div>
-<hr />
+
+
+<section class="hero">
+    <p class="lead">
+        <h4>Encrypter / Decrypter</h4>
+    </p>
+</section>
+
 <div class="container">
     <div>
-        <h3 class="text-center">Encrypter</h3>
+        <h3 class="text-center"></h3>
         <h4>Text Encrypter</h4>
         <form id="frmEncrypt">
             <input type="text" name="textoEncrypt" id="textoEncrypt" placeholder="Texto to encrypt" required class="txt-qr" />
@@ -48,12 +62,12 @@
     <div>
         <h4>Text Decrypter</h4>
         <form id="frmDecrypt">
-            <input type="text" 
-                    name="textoDecrypt" 
-                    id="textoDecrypt" 
+            <input type="text"
+                    name="textoDecrypt"
+                    id="textoDecrypt"
                     placeholder="Texto to decrypt"
                     value="UgBlAG4A6QAgAE0AbwBuAHQAbwB5AGEA"
-                    required 
+                    required
                     class="txt-qr" />
             <br /><br />
             <div id="resultDecrypt"></div>
@@ -67,8 +81,11 @@
         byte[] decryted = Convert.FromBase64String(_cadenaAdesencriptar);<br />
         result = System.Text.Encoding.Unicode.GetString(decryted);
     </div>
-    
 </div>
+
+
+   
+
 
 @* <form method="post">
     @Html.AntiForgeryToken()

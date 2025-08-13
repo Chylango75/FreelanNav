@@ -1,3 +1,5 @@
+using Microsoft.Extensions.FileProviders;
+
 namespace MvcFreelan
 {
     public class Program
@@ -19,8 +21,16 @@ namespace MvcFreelan
                 app.UseHsts();
             }
 
+            app.UseStatusCodePagesWithReExecute("/StatusCodeError/{0}");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseStaticFiles(new StaticFileOptions {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(builder.Environment.ContentRootPath, "Pics") ),
+                RequestPath = "/Pics" // This sets the URL path to access these files
+            });
 
             app.UseRouting();
 

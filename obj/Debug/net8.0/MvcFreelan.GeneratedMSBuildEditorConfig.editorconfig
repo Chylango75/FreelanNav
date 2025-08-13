@@ -28,8 +28,16 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Renn/Dev/MVC/MvcFreelan/Views/Elevator/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxldmF0b3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Renn/Dev/MVC/MvcFreelan/Views/Home/Herror.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIZXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Renn/Dev/MVC/MvcFreelan/Views/Home/Index.cshtml]

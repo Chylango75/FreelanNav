@@ -1,6 +1,6 @@
-wwwroot\css\elevator.css
-wwwroot\css\renta.css
 wwwroot\css\site.css
+wwwroot\css\renta.css
+wwwroot\css\jquery-ui.css
 wwwroot\favicon.ico
 wwwroot\js\elevator.js
 wwwroot\js\qr-reader.js
@@ -67,3 +67,5 @@ wwwroot\lib\jquery\LICENSE.txt
 wwwroot\pics\elevatorClose.png
 wwwroot\pics\elevatorOpen.png
 wwwroot\pics\MotSeg.png
+wwwroot\css\elevator.css
+wwwroot\js\jquery-ui.min.js

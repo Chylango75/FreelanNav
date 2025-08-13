@@ -35,6 +35,13 @@ namespace MvcFreelan.Controllers
             return View();
         }
 
+        public IActionResult Herror()
+        {
+            var f = 0;
+            var g = 8 / f;
+            return View();
+        }
+
         public IActionResult Mtrx()
         {
             return View();

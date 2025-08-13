@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MvcFreelan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e13ae872b01b0689e2a93ab781cd2c3851619fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c27288098fab52be81c2927c1ea31349f3ab778b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MvcFreelan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MvcFreelan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

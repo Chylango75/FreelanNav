@@ -27,6 +27,12 @@
     a:visited {
         color: limegreen;
     }
+
+    #totCobbles {
+        background-color: black;
+        color: limegreen;
+        width: 50px
+    }
 </style>
 
 <html>
@@ -36,6 +42,7 @@
     </canvas>
     <div class="absolute-div">
         <a class="nav-link text-dark" href="/Home/Index">Home</a>
+        <input type="number" id="totCobbles" value="200" onchange="createCobbles()" step="10" max="2000" min="10" />
     </div>
 
 <script>
@@ -45,8 +52,8 @@
         location.reload();
     }
 
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    // const windowWidth = window.innerWidth;
+    // const windowHeight = window.innerHeight;
 
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -60,7 +67,8 @@
     var nextDate = new Date();
 
     var cobbles = [];
-    let totSymbols = 150;
+    var totSymbols = document.getElementById("totCobbles").value;
+    //let totSymbols = 150;
     let disminuColor = 15;
     //let degrades2 = [15, 31, 47, 63, 79, 95, 111, 127, 143, 159, 175, 191, 207, 223, 239, 255];
     let degrades = [];
@@ -98,7 +106,13 @@
 
     //////////////////////     LOOP FUNCTIONS     ////////////////////
 
+
+
+
     function createCobbles() {
+            cobbles = [];
+        var totSymbols = document.getElementById("totCobbles").value;
+        
         for (i = 0; i < totSymbols; i++) {
             var xChar = getRandomInt(alphabet.length);
             var lastDate = new Date();
@@ -128,6 +142,7 @@
     }
 
     function printCobbles() {
+            //createCobbles();
         ctx.font = "bold 15px arial";
         ctx.globalAlpha = 0.9;
         for (i = 0; i < cobbles.length; i++) {

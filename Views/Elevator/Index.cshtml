@@ -6,11 +6,12 @@
     ViewData["Title"] = "Elevator";
 }
 
-<div class="container">
-    <h3>Elevator </h3>
-    <p>Simulation of an elevater being requested in a building.</p>
-    <hr />
-</div>
+<section class="hero">
+    <div class="container">
+        <h4 class="display-6">Elevator</h4>
+        <p class="lead">Simulation of an elevater being requested in a building.</p>
+    </div>
+</section>
 
 <div class="container">
     <div class="row bordered lowGray">
@@ -115,23 +116,11 @@
                 <input type="button" class="btn btnCtrl btn-sm btn-warning" onclick="elevatorMove()" value="Launch" /><br />
                 <input type="button" class="btn btnCtrl btn-sm btn-warning" onclick="elevatorStop()" value="Stop" /><br />
                 <input type="button" class="btn btnCtrl btn-sm btn-warning" onclick="Go()" value="Step by Step" /><br />
-                * This app autostarts; press "Stop" and then go step by step.
+                * This app autostarts; Also you can press "Stop" and then go step by step.
             </div>
         </div>
     </div>
 </div>
-
-<hr />
-
-<div>
-    <div class="container">
-        <div class="row">
-           
-        </div>
-    </div>
-</div>
-
-
 
 <script src="/js/elevator.js"></script>
 <link href="~/css/elevator.css" rel="stylesheet" />
