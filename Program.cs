@@ -1,4 +1,11 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using MvcFreelan.Models.Freelan;
 
 namespace MvcFreelan
 {
@@ -10,6 +17,21 @@ namespace MvcFreelan
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContextPool<AppDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
+
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+
+            builder.Services.AddScoped<IEmployeeRepository, SqlEmployeeRepository>();
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options =>
+            {
+                options.LoginPath = "/Account/Login"; // Path to your login page
+                options.AccessDeniedPath = "/Account/AccessDenied"; // Path to your access denied page
+            });
 
             var app = builder.Build();
 

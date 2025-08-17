@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MvcFreelan.Data;
@@ -7,6 +9,7 @@ using MvcFreelan.Helpers.Worklift;
 using MvcFreelan.Models;
 using MvcFreelan.Models.Forklift;
 using MvcFreelan.Models.WorkliftMods;
+using MvcFreelan.ViewModels;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -18,27 +21,23 @@ namespace MvcFreelan.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private IConfiguration configuration;
+        private IConfiguration _configuration;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration _configuration)
+        public HomeController(  ILogger<HomeController> logger, 
+                                IConfiguration configuration)
         {
             _logger = logger;
-            configuration = _configuration;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
         {
-            string codedConn = configuration.GetConnectionString("conn");
-            DbRenta db = new DbRenta(codedConn.DesEncriptar());
+            //string codedConn = configuration.GetConnectionString("conn");
+            //DbRenta db = new DbRenta(codedConn.DesEncriptar());
+
+            string conn = _configuration.GetConnectionString("conn");
+            DbRenta db = new DbRenta(conn);
             ViewBag.resp = db.VerifConn();
-
-            return View();
-        }
-
-        public IActionResult Herror()
-        {
-            var f = 0;
-            var g = 8 / f;
             return View();
         }
 
@@ -69,7 +68,5 @@ namespace MvcFreelan.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
     }
 }

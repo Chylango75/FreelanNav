@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model List<IdentityRole>
+
+<div class="container">
+    <br />
+    <h4>List of Roles</h4>
+
+    <ul>
+        @foreach (var role in Model)
+        {
+            <li>@role.Name</li>
+        }
+    </ul>
+
+    <a class="btn btn-sm btn-primary" asp-controller="Admin" asp-action="AddRole">Add Role</a>
+</div>
+<br />

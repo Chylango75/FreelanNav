@@ -273,5 +273,28 @@ namespace MvcFreelan.Data
             }
         }
 
+
+        public string AdminSet()
+        {
+            try
+            {
+                string resp = "ERROR: No Conn";
+
+                using (SqlConnection conn = new SqlConnection(strConn))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("AdminSet", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                    resp = "OK";
+                }
+                return resp;
+            }
+            catch (Exception ex)
+            {
+                return "ERROR INQUI:" + ex.Message;
+            }
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MvcFreelan.Data;
 using MvcFreelan.Helpers;
@@ -11,6 +12,8 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MvcFreelan.Controllers
 {
+    //[Authorize(Roles = "Admin, Visitor")]
+    [Authorize]
     public class RentasController : Controller
     {
         private IConfiguration _configuration;
@@ -19,8 +22,10 @@ namespace MvcFreelan.Controllers
         public RentasController(IConfiguration configuration)
         {
             _configuration = configuration;
-            string codedConn = configuration.GetConnectionString("conn");
-            conn = codedConn.DesEncriptar();
+            //string codedConn = configuration.GetConnectionString("conn");
+            //conn = codedConn.DesEncriptar();
+
+            conn = configuration.GetConnectionString("conn");
         }
 
         public IActionResult Index()

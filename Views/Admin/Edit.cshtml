@@ -1,0 +1,44 @@
+﻿@using MvcFreelan.ViewModels
+@model UserViewModel
+
+<div class="container">
+    <br />
+    <h4>Editing Employee</h4>
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="User.Id" />
+                <div class="form-group">
+                    <label asp-for="User.UserName" class="control-label"></label>
+                    <input asp-for="User.UserName" class="form-control" />
+                    <span asp-validation-for="User.UserName" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label asp-for="User.Email" class="control-label"></label>
+                    <input asp-for="User.Email" class="form-control" />
+                    <span asp-validation-for="User.Email" class="text-danger"></span>
+                </div>
+                <br />
+                <ul>
+                    @for(int i = 0; i< Model.Roles.Count; i++)
+                    {
+                        <ul>
+                        <input type="checkbox" asp-for="Roles[i].IsSelected" />
+                        <label asp-for="Roles[i].IsSelected">@Model.Roles[i].Name</label>
+                        <input type="hidden" asp-for="Roles[i].Id" />
+                        <input type="hidden" asp-for="Roles[i].Name" />
+                        </ul>
+                    }
+                </ul>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <a class="btn btn-primary"  asp-controller="Admin" asp-action="Users">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    @ViewBag.Errors
+</div>

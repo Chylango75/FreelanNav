@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityUser>
+
+
+<div class="container">
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Action</th>
+        </thead>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>
+                    <a class="nav-link" asp-controller="Admin" asp-action="Edit" asp-route-id="@user.Id"> <span style="color: blue">Edit</span></a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+</div>

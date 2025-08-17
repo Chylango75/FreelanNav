@@ -1,6 +1,6 @@
 ﻿
 
-
+/*
 function IniPartial() {
     $.ajax({
         type: "post",
@@ -12,7 +12,7 @@ function IniPartial() {
 }
 
 IniPartial();
-
+*/
 
 
 //////     xTRA  functions
