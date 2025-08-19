@@ -2,11 +2,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MvcFreelan.Data;
+using MvcFreelan.Models;
 using MvcFreelan.ViewModels;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MvcFreelan.Controllers
 {
-    [Authorize]
+    
     public class AccountController : Controller
     {
 
@@ -40,17 +42,26 @@ namespace MvcFreelan.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            if (ModelState.IsValid)
+            try
             {
-                //   var user = new IdentityUser { UserName = model.Email, Email = model.Email };
-                var result = await _signInManager.PasswordSignInAsync(model.Name, model.Password, model.RememberMe, false);
+                if (ModelState.IsValid)
+                {
+                    //   var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                    var result = await _signInManager.PasswordSignInAsync(model.Name, model.Password, model.RememberMe, false);
 
-                if (result.Succeeded)
-                    return RedirectToAction("Index", "Home");
+                    if (result.Succeeded)
+                        return RedirectToAction("Index", "Home");
 
-                ModelState.AddModelError(string.Empty, "Invalid Log Attempt");
+                    ModelState.AddModelError(string.Empty, "Invalid Log Attempt");
+                }
+                return View(model);
             }
-            return View(model);
+            catch(Exception ex)
+            {
+                var err = new ErrorViewModel();
+                err.RequestId = ex.Message;
+                return View("~/Views/Shared/Error.cshtml", err); // Or a specific error view
+            }
         }
 
 

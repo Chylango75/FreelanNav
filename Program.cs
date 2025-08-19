@@ -43,16 +43,11 @@ namespace MvcFreelan
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
+
             app.UseStatusCodePagesWithReExecute("/StatusCodeError/{0}");
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
-            app.UseStaticFiles(new StaticFileOptions {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(builder.Environment.ContentRootPath, "Pics") ),
-                RequestPath = "/Pics" // This sets the URL path to access these files
-            });
 
             app.UseRouting();
 

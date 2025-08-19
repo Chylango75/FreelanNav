@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\pics\000Error.jpg" />
+    <None Include="wwwroot\pics\400NotFound.jpg" />
+    <None Include="wwwroot\pics\500InternalError.jpg" />
+    <None Include="wwwroot\pics\666AccessDenied.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.19" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />

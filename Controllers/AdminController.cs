@@ -149,13 +149,15 @@ namespace MvcFreelan.Controllers
         [Route("/StatusCodeError/{statusCode}")]
         public IActionResult Index(int statusCode)
         {
-            var path = "/Pics/000Error.jpg";
+            var path = "/pics/000Error.jpg";
 
             if (statusCode > 0)
             {
                 if (statusCode >= 400 && statusCode <= 500)
-                    path = "/Pics/400NotFound.jpg";
+                    //path = "";
+                    path = "/pics/400NotFound.jpg";
                 if (statusCode >= 500)
+                    //path = "";
                     path = "/Pics/500InternalError.jpg";
             }
 

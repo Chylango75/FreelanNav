@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Renn\\Dev\\MVC\\MvcFreelan\\MvcFreelan.csproj": {}
+    "D:\\Dev\\Mvc\\MvcFreelan\\MvcFreelan.csproj": {}
   },
   "projects": {
-    "C:\\Renn\\Dev\\MVC\\MvcFreelan\\MvcFreelan.csproj": {
+    "D:\\Dev\\Mvc\\MvcFreelan\\MvcFreelan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\MvcFreelan.csproj",
+        "projectUniqueName": "D:\\Dev\\Mvc\\MvcFreelan\\MvcFreelan.csproj",
         "projectName": "MvcFreelan",
-        "projectPath": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\MvcFreelan.csproj",
+        "projectPath": "D:\\Dev\\Mvc\\MvcFreelan\\MvcFreelan.csproj",
         "packagesPath": "C:\\Users\\Kermit\\.nuget\\packages\\",
-        "outputPath": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\obj\\",
+        "outputPath": "D:\\Dev\\Mvc\\MvcFreelan\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,12 +1,104 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Renn\\Dev\\MVC\\MvcFreelan\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Dev\\Mvc\\MvcFreelan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\models\\freelan\\mockemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:models\\freelan\\mockemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\controllers\\elevatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\elevatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:03:37.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MockEmployeeRepository.cs",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Models\\Freelan\\MockEmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Models\\Freelan\\MockEmployeeRepository.cs",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Models\\Freelan\\MockEmployeeRepository.cs",
+              "RelativeToolTip": "Models\\Freelan\\MockEmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T09:56:49.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T08:55:56.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T08:55:51.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ElevatorController.cs",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\ElevatorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ElevatorController.cs",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\ElevatorController.cs",
+              "RelativeToolTip": "Controllers\\ElevatorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T08:28:05.066Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,8 +1,10 @@
-wwwroot\css\site.css
-wwwroot\css\renta.css
+wwwroot\css\elevator.css
 wwwroot\css\jquery-ui.css
+wwwroot\css\renta.css
+wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\elevator.js
+wwwroot\js\jquery-ui.min.js
 wwwroot\js\qr-reader.js
 wwwroot\js\readerQR.js
 wwwroot\js\renta.js
@@ -64,8 +66,10 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\pics\000Error.jpg
+wwwroot\pics\400NotFound.jpg
+wwwroot\pics\500InternalError.jpg
+wwwroot\pics\666AccessDenied.jpg
 wwwroot\pics\elevatorClose.png
 wwwroot\pics\elevatorOpen.png
-wwwroot\pics\MotSeg.png
-wwwroot\css\elevator.css
-wwwroot\js\jquery-ui.min.js
+wwwroot\pics\motseg.png
