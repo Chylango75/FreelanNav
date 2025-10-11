@@ -80,8 +80,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNdHJ4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dev/Mvc/MvcFreelan/Views/Home/Qualitaz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWFsaXRhei5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev/Mvc/MvcFreelan/Views/Home/ReneCV.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZW5lQ1YuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/Mypays/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/Mypays/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/Mypays/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/Mypays/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/Mypays/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/MypayTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlUeXBlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/MypayTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlUeXBlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/MypayTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlUeXBlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/MypayTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlUeXBlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dev/Mvc/MvcFreelan/Views/MypayTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlwYXlUeXBlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Dev/Mvc/MvcFreelan/Views/QR/Index.cshtml]

@@ -27,7 +27,8 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Password">@Model.Password</label>
-                    <input asp-for="Password" class="form-control" value="Password123&" />
+                    @* <input asp-for="Password" class="form-control" value="Password123&" /> *@
+                    <input asp-for="Password" class="form-control" value="Password" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                 <br />

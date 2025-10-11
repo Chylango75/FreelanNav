@@ -35,6 +35,23 @@
             box-shadow: 0 2px 5px 0 rgba(17, 116, 247, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
             background-color: rgb(243, 243, 243);
         }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            align-content: center;
+            object-position: center;
+            transition: transform ease-in-out 0.5s;
+        }
+
+        .zoom {
+            z-index: 1;
+            transform: scale(1.5);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 
@@ -59,68 +76,74 @@
     </div>
 
     <div class="container">
-        <div>
-            <div style="margin-bottom: 20px">
-                <div class="xpery">
-                    <h6>
-                        <font face="Arial, bold" class="azu"><strong>About me</strong></font>
-                    </h6>
-                    <hr style="margin: 0px">
-                    <p>I'm a Computer Engineer with a Master degree in Computer Science with a 2-month course about Image Analysis in Germany for my M.Sc., I like practicing sports, hiking and sketching; I easily get along with people and I live with the mentality of: "Life isn't always easy, but it is in our hands how to deal with it".</p>
-                    <br>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-2">
+                <div>
+                    <img src="~/pics/rene01.png" class="img-fluid" alt="Web Developer" />
                 </div>
+            </div>
+            <div class="col-md-10">
+                    <div class="xpery">
+                        <h6>
+                            <font face="Arial, bold" class="azu"><strong>About me</strong></font>
+                        </h6>
+                        <hr style="margin: 0px">
+                        <p>I'm a Computer Engineer with a Master degree in Computer Science with a 2-month course about Image Analysis in Germany for my M.Sc., I like practicing sports, hiking and sketching; I easily get along with people and I live with the mentality of: "Life isn't always easy, but it is in our hands how to deal with it".</p>
+                        <br>
+                    </div>
+                    <div class="xpery">
+                        <h6>
+                            <font face="Arial, bold" class="azu"><strong>Summary</strong></font>
+                        </h6>
+                        <hr style="margin: 0px">
+                        <p>
+                            Committed worker with a history of meeting company needs with consistent and organized practices. Skilled
+                            in working under pressure and adapting to new situations and challenges to best enhance the organizational
+                            brand; Ambitious and anxious to work as “Web Developer” implementing new technologies while achieving
+                            work-group goals.
+                        </p>
+                        <br>
+                    </div>
+            </div>
+          </div>
+        </div>
 
-                <div class="xpery">
-                    <h6>
-                        <font face="Arial, bold" class="azu"><strong>Summary</strong></font>
-                    </h6>
-                    <hr style="margin: 0px">
-                    <p>
-                        Committed worker with a history of meeting company needs with consistent and organized practices. Skilled
-                        in working under pressure and adapting to new situations and challenges to best enhance the organizational
-                        brand; Ambitious and anxious to work as “Web Developer” implementing new technologies while achieving
-                        work-group goals.
-                    </p>
-                    <br>
-                </div>
-
-                <div class="xpery">
-                    <h6>
-                        <font face="Arial, bold" class="azu"><strong>Skills</strong></font>
-                    </h6>
-                    <hr style="margin: 0px">
-                    <div class="container">
-                        <div class="row align-items-start">
-                            <div class="col">
-                                <ul>
-                                    <li>Azure developer using Function Apps.</li>
-                                    <li>Web developer using C# with Razor in Visual Studio.</li>
-                                    <li>Angular Frontend Developer.</li>
-                                    <li>SQL Server DBA, also MySQL, Oracle, SQLite and others.</li>
-                                    <li>Worked with jQuery, JavaScript, TS, VUE, and knockout.</li>
-                                    <li>Creation & testing of RESTful Services with Postman, VS Code, Swagger etc.</li>
-                                    <li>CSS, Bootstrap, node.</li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <ul>
-                                    <li>Software development with WPF, JavaFX, WCF, WPF.</li>
-                                    <li>Microsoft ASP.NET, NET Core, SSMS.</li>
-                                    <li>Documentation, creation and updates.</li>
-                                    <li>Continuous integration.</li>
-                                    <li>Blockchain with Hyperledger, Linux, Docker, Virtual Box and other tools.</li>
-                                    <li>Experience with Android Studio for mobile app development.</li>
-                                    <li>Java development with NetBeans and Eclipse.</li>
-                                </ul>
-                            </div>
+            <div class="xpery">
+                <h6>
+                    <font face="Arial, bold" class="azu"><strong>Skills</strong></font>
+                </h6>
+                <hr style="margin: 0px">
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <ul>
+                                <li>Azure developer using Function Apps.</li>
+                                <li>Web developer using C# with Razor in Visual Studio.</li>
+                                <li>Angular Frontend Developer.</li>
+                                <li>SQL Server DBA, also MySQL, Oracle, SQLite and others.</li>
+                                <li>Worked with jQuery, JavaScript, TS, VUE, and knockout.</li>
+                                <li>Creation & testing of RESTful Services with Postman, VS Code, Swagger etc.</li>
+                                <li>CSS, Bootstrap, node.</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Software development with WPF, JavaFX, WCF, WPF.</li>
+                                <li>Microsoft ASP.NET, NET Core, SSMS.</li>
+                                <li>Documentation, creation and updates.</li>
+                                <li>Continuous integration.</li>
+                                <li>Blockchain with Hyperledger, Linux, Docker, Virtual Box and other tools.</li>
+                                <li>Experience with Android Studio for mobile app development.</li>
+                                <li>Java development with NetBeans and Eclipse.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <br>
             </div>
+            <br>
 
-
-            <div style="margin-bottom: 40px;" class="xpery">
+            <div style="margin-bottom: 80px;" class="xpery">
                 <h6>
                     <font face="Arial" class="azu"><strong>Education</strong></font>
                 </h6>
@@ -170,7 +193,7 @@
                 <hr style="margin: 0px">
             </div>
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>
@@ -200,7 +223,7 @@
             <br>
 
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>
@@ -232,7 +255,7 @@
             <br>
 
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>
@@ -262,7 +285,7 @@
             <br>
 
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>
@@ -294,7 +317,7 @@
             <br>
 
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>
@@ -321,7 +344,7 @@
             <br>
 
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>
@@ -349,7 +372,7 @@
             <br>
 
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>
@@ -381,7 +404,7 @@
             <br>
 
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>
@@ -409,7 +432,7 @@
             <br>
 
 
-            <div class="container" class="contXperience">
+            <div class="container contXperience">
                 <div class="row xpery">
                     <div class="col-sm-3">
                         <div>

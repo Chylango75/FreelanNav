@@ -1,9 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Identity
- 
-
 @inject SignInManager<IdentityUser> signInManager
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +20,14 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MvcFreelan.styles.css" asp-append-version="true" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -46,24 +50,23 @@
                             <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Users">≡</a>
                         </li>
                     }
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="QR" asp-action="Index" >QR</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Elevator" asp-action="Index">Elevator</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="ReneCV">CV-René</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="MotSeg">Mot-Seg</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Mtrx">ScreenSaver</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Rentas" asp-action="Index">Rentas</a>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="ReneCV">CV-René</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Mtrx">Screen Saver</a></li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  data-bs-toggle="dropdown" aria-expanded="false">Examples</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" asp-controller="QR" asp-action="Index">QR</a></li>
+                            <li><a class="dropdown-item" asp-controller="Elevator" asp-action="Index">Elevator</a></li>
+                            <li><a class="dropdown-item" asp-controller="Rentas" asp-action="Index">Rentas</a></li>
+                            <li><a class="dropdown-item" asp-controller="Mypays" asp-action="Index">House Pays</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Qualitaz">Quálitaz</a></li>
+                            <li><a class="dropdown-item" asp-controller="Home" asp-action="MotSeg">Motion Segmentation</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -90,20 +93,16 @@
             </div>
         </div>
     </nav>
+
     <div>
-        
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
 
-@*     <footer class="border-top footer text-muted">
-        <div class="container text-center">
-            &copy; 2025 - René
-        </div>
-    </footer>
- *@
+
+
+
     <!-- Pie de página -->
     <footer>
         <div class="container">
@@ -114,10 +113,23 @@
     </footer>
 
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/jquery-ui.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Scripts", required: false) *@
+
+
+    @* CLICK ON IMGE TO FULL SCREEN *@
+    <script>
+        $(document).ready(
+            function(){
+                $("img").click(
+                    function() {
+                        this.requestFullscreen()
+                    }
+            )}
+        );
+    </script>
 </body>
 </html>

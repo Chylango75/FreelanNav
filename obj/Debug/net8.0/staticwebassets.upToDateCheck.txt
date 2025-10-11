@@ -70,6 +70,8 @@ wwwroot\pics\000Error.jpg
 wwwroot\pics\400NotFound.jpg
 wwwroot\pics\500InternalError.jpg
 wwwroot\pics\666AccessDenied.jpg
+wwwroot\pics\check.svg
 wwwroot\pics\elevatorClose.png
 wwwroot\pics\elevatorOpen.png
 wwwroot\pics\motseg.png
+wwwroot\pics\rene01.png

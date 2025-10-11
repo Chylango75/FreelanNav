@@ -1,0 +1,424 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro de Prevención de Daños | Qualitas</title>
+    <style>
+        :root {
+            --color-primary: #8f2a82;
+            --color-accent: #FF6600;
+            --color-light: #f5f7fa;
+            --color-gray: #e2e8f0;
+            --color-dark: #2d3748;
+            --color-text: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-light);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--color-primary);
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+            .logo span {
+                color: var(--color-accent);
+            }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+            nav a:hover {
+                color: var(--color-accent);
+            }
+
+        .hero {
+            background: linear-gradient(to left, #009193, #8f2a82);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+            .btn:hover {
+                background-color: #e55a00;
+            }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin: 4rem 0;
+        }
+
+        h2 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background-color: #009193;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .txtBlanco {
+            color: #fff;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .icon {
+            background-color: var(--color-gray);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+            font-size: 1.5rem;
+        }
+
+        .how-it-works {
+            background-color: var(--color-gray);
+            padding: 4rem 2rem;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            background-color: var(--color-primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+            .cta h2 {
+                color: white;
+            }
+
+            .cta .btn {
+                margin-top: 1.5rem;
+            }
+
+        footer {
+            background-color: var(--color-dark);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            opacity: 0.8;
+            color: white;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+        }
+
+            .footer-section a:hover {
+                opacity: 1;
+            }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        
+        n/* av ul {
+            display: none;
+        } */
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Qualitaz<span>Prevención</span></div>
+        </div>
+        <div class="header-container">
+            <nav>
+                <ul>
+                    <li><a class="dropdown-item" asp-controller="QR" asp-action="Index">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#contactanos">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Protección preventiva para tu patrimonio</h1>
+            <p>Nuestro seguro de prevención de daños te ayuda a identificar riesgos y evitar pérdidas antes de que ocurran</p>
+            <a href="#" onclick="Msg()" class="btn">Cotizar ahora</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section>
+            <h2>¿Por qué prevenir en vez de reparar?</h2>
+            <p>En Qualitaz Prevención entendemos que el verdadero valor de un seguro no está solamente en compensar pérdidas, sino en evitarlas. Nuestra filosofía se basa en la protección proactiva de tu patrimonio mediante la identificación temprana de riesgos y la implementación de medidas preventivas.</p>
+            <p>Los seguros tradicionales te protegen después de un incidente, pero nuestro enfoque de prevención te ayuda a evitar que estos incidentes ocurran, ahorrándote tiempo, preocupaciones y recursos.</p>
+        </section>
+
+        <section id="beneficios">
+            <h2>Beneficios de nuestro seguro preventivo</h2>
+            <div class="benefits">
+                <div class="benefit-card txtBlanco">
+                    <div class="icon">🔍</div>
+                    <h3>Evaluación de riesgos</h3>
+                    <p>Nuestros expertos analizan tu propiedad para identificar vulnerabilidades y puntos de mejora en tu seguridad.</p>
+                </div>
+                <div class="benefit-card txtBlanco">
+                    <div class="icon">🛡️</div>
+                    <h3>Plan de prevención personalizado</h3>
+                    <p>Desarrollamos estrategias específicas para tu situación particular, maximizando la protección de tus bienes.</p>
+                </div>
+                <div class="benefit-card txtBlanco">
+                    <div class="icon">💰</div>
+                    <h3>Ahorro garantizado</h3>
+                    <p>Reduce hasta en un 40% los costos asociados a reparaciones y primas de seguros tradicionales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ámbitos de protección</h2>
+            <p>Nuestro seguro de prevención de daños cubre una amplia gama de aspectos para garantizar la seguridad integral de tu patrimonio:</p>
+            <ul style="list-style-type:none;">
+                <li>
+                    <img loading="lazy" src="~/pics/check.svg" width="18" height="18" alt="check" class="img-sprite checK" />
+                    <strong>Estructural:</strong> Evaluación y recomendaciones para prevenir daños en la construcción
+                </li>
+                <li>
+                    <img loading="lazy" src="~/pics/check.svg" width="18" height="18" alt="check" class="img-sprite checK" />
+                    <strong>Eléctrico:</strong> Prevención de cortocircuitos, sobrecargas e incendios de origen eléctrico
+                </li>
+                <li>
+                    <img loading="lazy" src="~/pics/check.svg" width="18" height="18" alt="check" class="img-sprite checK" />
+                    <strong>Hidráulico:</strong> Detección de fugas y prevención de daños por agua
+                </li>
+                <li>
+                    <img loading="lazy" src="~/pics/check.svg" width="18" height="18" alt="check" class="img-sprite checK" />
+                    <strong>Ambiental:</strong> Protección contra fenómenos naturales y condiciones climáticas adversas
+                </li>
+                <li>
+                    <img loading="lazy" src="~/pics/check.svg" width="18" height="18" alt="check" class="img-sprite checK" />
+                    <strong>Seguridad:</strong> Sistemas antirobos y antintrusión adaptados a tus necesidades
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>¿Cómo funciona nuestro sistema de prevención?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Diagnóstico inicial</h3>
+                    <p>Realizamos una evaluación exhaustiva de tu propiedad para identificar potenciales riesgos.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Plan personalizado</h3>
+                    <p>Elaboramos un plan de prevención específico con medidas adaptadas a tu situación.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Implementación</h3>
+                    <p>Te acompañamos en la ejecución de las medidas preventivas recomendadas.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Seguimiento continuo</h3>
+                    <p>Monitoreamos periódicamente tu propiedad para asegurar la efectividad de las medidas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section>
+            <h2>Testimonios de clientes protegidos</h2>
+            <p><em>"Gracias al sistema de prevención de Qualitaz, detectamos una fuga de gas potencialmente peligrosa antes de que causara daños. Su equipo respondió inmediatamente y solucionó el problema. ¡No tengo duda de que evitaron una tragedia!"</em> - Laura M., cliente desde 2021</p>
+            <p><em>"El análisis estructural preventivo identificó un problema en los cimientos que hubiera costado miles en reparaciones de no haberse detectado a tiempo. La inversión en prevención valió cada centavo."</em> - Roberto J., cliente comercial</p>
+        </section>
+    </div>
+
+    <section class="cta">
+        <h2>Protege lo que más te importa</h2>
+        <p>No esperes a que ocurra un siniestro para actuar. La verdadera protección comienza antes.</p>
+        <a href="#" onclick="Msg()" class="btn">Solicitar asesoría gratuita</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Qualitaz Prevención</h3>
+                <p>La mejor estrategia para proteger tu patrimonio es evitar pérdidas antes de que ocurran.</p>
+            </div>
+            <div class="footer-section" id="ontactanos">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: (800) 123-4567</p>
+                <p>Email: prevencion@qualitaz.com</p>
+                <p>Dirección: Av. Protección 123, Ciudad</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Coberberturas</a>
+                <a href="#">Blog de prevención</a>
+                <a href="#">Área de clientes</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Qualitaz Prevención. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function Msg(){
+            alert("Solo Página de Ejemplo");
+        }
+    </script>
+</body>
+</html>

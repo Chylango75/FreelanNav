@@ -54,10 +54,15 @@
 
 <div id="divPagos"></div>
 
+
+<link href="~/css/renta.css" rel="stylesheet" />
+<script src="/js/renta.js"></script>
+
+
 <script>
     $(document).ajaxSuccess(function() {
 
-         $("#inquiName").autocomplete({
+         $("#inquiName").autocomplete ({
             source: function (request, response) {
                 $.ajax({
                     url: '/Rentas/InquisGetN',

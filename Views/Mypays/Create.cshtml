@@ -1,0 +1,107 @@
+﻿@model MvcFreelan.Models.Mypays.Mypay
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<style>
+    .ui-datepicker-prev {
+        background-color: darkgrey;
+        color:black;
+    }
+    .ui-datepicker-next {
+        background-color: darkgrey;
+        color: black;
+    }
+
+</style>
+
+<div class="container">
+    <h3>Create Mypay</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    @*<label asp-for="SelectedMypaytypeId" class="control-label"></label>
+                    <input asp-for="SelectedMypaytypeId" class="form-control" /> *@
+                    <label asp-for="SelectedMypaytypeId">Select an Item:</label>
+                    @Html.DropDownListFor(m => m.SelectedMypaytypeId, Model.Items, "Select an item", new { @class = "form-control" })
+                    <span asp-validation-for="SelectedMypaytypeId" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label asp-for="TotalMypay" class="control-label"></label>
+                    <input asp-for="TotalMypay" class="form-control" />
+                    <span asp-validation-for="TotalMypay" class="text-danger"></span>
+                </div>
+                <br />
+                @* <div>
+                    <p>Date: <input type="text" id="dtMypay"></p>
+                </div> *@
+                <div class="form-group">
+                    <label asp-for="DateCovered" class="control-label"></label>
+                    <input asp-for="DateCovered" class="form-control" autocomplete="off" />
+                    <span asp-validation-for="DateCovered" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group" style="display:none">
+                    <label asp-for="DateAdded" class="control-label"></label>
+                    <input asp-for="DateAdded" class="form-control" />
+                    <span asp-validation-for="DateAdded" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Note" class="control-label"></label>
+                    <input asp-for="Note" class="form-control"/>
+                    <span asp-validation-for="Note" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group" style="display: none">
+                    <label asp-for="AspUser" class="control-label"></label>
+                    <input asp-for="AspUser" class="form-control" />
+                    <span asp-validation-for="AspUser" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check" style="display: none">
+                    <label class="form-check-label">
+                        <input class="form-check-input" checked asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+                <br />
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#DateCovered").datepicker
+        ({
+            format: 'dd/mm/yyyy',
+            todayHighlight: true,
+            autoclose: true,
+            onSelect: function(value, ui) {
+                var today = new Date();
+                var age = today.getFullYear() - ui.selectedYear;
+                $('#age').val(age);
+
+                fecha = $('#DateCovered').val();
+                $('#DateAdded').val(fecha);
+            },
+            changeMonth: true,
+            changeYear: true
+        });
+    })
+
+    
+
+</script>

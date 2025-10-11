@@ -73,3 +73,5 @@ wwwroot\pics\666AccessDenied.jpg
 wwwroot\pics\elevatorClose.png
 wwwroot\pics\elevatorOpen.png
 wwwroot\pics\motseg.png
+wwwroot\pics\check.svg
+wwwroot\pics\rene01.png

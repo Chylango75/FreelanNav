@@ -217,6 +217,41 @@ namespace MvcFreelan.Data
             return pagos;
         }
 
+
+
+
+        /////////////////         Pagos
+
+
+        public string AddMypayType(string mypayType)
+        {
+            try
+            {
+                string strResp = "ERROR ";
+                int intRes = -1;
+
+                using (SqlConnection conn = new SqlConnection(strConn))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("MypayTypeAdd", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Name", mypayType));
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    intRes = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+
+                if (intRes > 0)
+                    strResp = "OK, Mypay Agregado con ID: " + intRes;
+
+                return strResp;
+            }
+            catch (Exception ex)
+            {
+                return "ERROR INQUI: " + ex.Message;
+            }
+        }
+
+
         /////////////////         xTras
 
         public string VerifConnOLD(string cadConn)

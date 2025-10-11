@@ -1,12 +1,87 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Dev\\Mvc\\MvcFreelan\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\views\\mypays\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\mypays\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\models\\mypays\\mypay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:models\\mypays\\mypay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\controllers\\mypayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\mypayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\views\\mypays\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\mypays\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mypay.cs",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Models\\Mypays\\Mypay.cs",
+              "RelativeDocumentMoniker": "Models\\Mypays\\Mypay.cs",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Models\\Mypays\\Mypay.cs",
+              "RelativeToolTip": "Models\\Mypays\\Mypay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T09:08:37.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MypaysController.cs",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\MypaysController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MypaysController.cs",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\MypaysController.cs",
+              "RelativeToolTip": "Controllers\\MypaysController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAADgv0gAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T08:34:15.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Mypays\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mypays\\Create.cshtml",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Mypays\\Create.cshtml",
+              "RelativeToolTip": "Views\\Mypays\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T08:31:11.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Mypays\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mypays\\Index.cshtml",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Mypays\\Index.cshtml",
+              "RelativeToolTip": "Views\\Mypays\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T08:29:37.139Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -142,12 +142,11 @@ namespace MvcFreelan.Controllers
             return RedirectToAction("Roles");
         }
 
-
         //////////////////////////////////////////////////////////////////////////////////
 
         [AllowAnonymous]
         [Route("/StatusCodeError/{statusCode}")]
-        public IActionResult Index(int statusCode)
+        public IActionResult Index(int statusCode, string? msg)
         {
             var path = "/pics/000Error.jpg";
 
@@ -162,6 +161,7 @@ namespace MvcFreelan.Controllers
             }
 
             ViewBag.path = path;
+            ViewBag.msg = msg;
 
             return View();
         }

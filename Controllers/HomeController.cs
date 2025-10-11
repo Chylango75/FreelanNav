@@ -63,6 +63,12 @@ namespace MvcFreelan.Controllers
             return View();
         }
 
+
+        public IActionResult Qualitaz()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

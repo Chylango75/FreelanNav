@@ -26,11 +26,6 @@ namespace MvcFreelan.Controllers
             _configuration = configuration;
         }
 
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Login()
@@ -64,14 +59,12 @@ namespace MvcFreelan.Controllers
             }
         }
 
-
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
 
         [HttpGet]
         [AllowAnonymous]
