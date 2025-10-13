@@ -22,6 +22,10 @@ namespace MvcFreelan.Models.Mypays
         public int SelectedMypaytypeId { get; set; }
 
         [NotMapped]
+
+        public string? MypayName { get; set; }
+
+        [NotMapped]
         public List<SelectListItem>? Items { get; set; }
     }
 }

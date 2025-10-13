@@ -1,28 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcFreelan.Models.Freelan;
 using MvcFreelan.Models.Mypays;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MvcFreelan.Controllers
 {
     public class MypaysController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public MypaysController(AppDbContext context)
+        public MypaysController(
+            AppDbContext context,
+            UserManager<IdentityUser> userManager
+            )
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Mypays
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Mypays.ToListAsync());
+            var model = await _context.Mypays.ToListAsync();
+
+            var paytypes = await _context.MypayTypes
+                        .Select(p => new SelectListItem
+                        {
+                            Value = p.Id.ToString(),
+                            Text = p.MypayName
+                        })
+                        .ToListAsync();
+
+            foreach (var p in model)
+            {
+                p.MypayName = paytypes
+                                .Where(t => t.Value == p.SelectedMypaytypeId.ToString())
+                                .Select(t => t.Text)
+                                .FirstOrDefault();
+            }
+
+
+            model[0].Items = paytypes;
+
+            return View(model);
         }
 
         // GET: Mypays/Details/5
@@ -46,6 +73,9 @@ namespace MvcFreelan.Controllers
         // GET: Mypays/Create
         public async Task<IActionResult> Create()
         {
+            string userId = _userManager.GetUserId(User);
+
+
             var paytypes = await _context.MypayTypes
                                     .Select(p => new SelectListItem
                                     {
@@ -56,7 +86,7 @@ namespace MvcFreelan.Controllers
          
             var modelo = new Mypay();
             modelo.Items = paytypes;
-            modelo.AspUser = "123";
+            modelo.AspUser = userId;
             
             return View(modelo);
         }
@@ -68,7 +98,6 @@ namespace MvcFreelan.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,SelectedMypaytypeId,TotalMypay,DateCovered,DateAdded,Note,AspUser,Active")] Mypay mypay)
         {
-                
             if (ModelState.IsValid)
             {
                 _context.Add(mypay);

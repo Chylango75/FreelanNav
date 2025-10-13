@@ -4,16 +4,44 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h3>House Payments List</h3>
+<br />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div style="border: 1px solid gray; width:300px">
+@if (Model.Count() > 0)
+{
+    var payments = Model.ToList()[0];
+    <strong>Payments Catalog</strong>
+    <br />
+    
+    <ul>
+        @foreach (var item in payments.Items)
+        {
+            <li>
+                @item.Text
+            </li>
+        }
+    </ul>
+}
+    <p>
+        <a asp-controller="MypayTypes" asp-action="Create">Add Payment Type</a>
+    </p>
+</div>
+
+<br />
+<h5>
+    <a asp-action="Create">Add House Payment</a>
+</h5>
+
+
 <table class="table">
     <thead>
         <tr>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.SelectedMypaytypeId)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.MypayName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TotalMypay)
@@ -21,45 +49,48 @@
             <th>
                 @Html.DisplayNameFor(model => model.DateCovered)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.DateAdded)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.Note)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.AspUser)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Active)
-            </th>
+            </th> *@
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.SelectedMypaytypeId)
-            </td>
+            </td> *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.MypayName)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TotalMypay)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DateCovered)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.DateAdded)
-            </td>
+            </td> *@
             <td>
                 @Html.DisplayFor(modelItem => item.Note)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AspUser)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.Active)
-            </td>
+            </td> *@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
