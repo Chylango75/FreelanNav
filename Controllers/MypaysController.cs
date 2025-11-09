@@ -28,28 +28,37 @@ namespace MvcFreelan.Controllers
         // GET: Mypays
         public async Task<IActionResult> Index()
         {
-            var model = await _context.Mypays.ToListAsync();
-
-            var paytypes = await _context.MypayTypes
-                        .Select(p => new SelectListItem
-                        {
-                            Value = p.Id.ToString(),
-                            Text = p.MypayName
-                        })
-                        .ToListAsync();
-
-            foreach (var p in model)
+            try
             {
-                p.MypayName = paytypes
-                                .Where(t => t.Value == p.SelectedMypaytypeId.ToString())
-                                .Select(t => t.Text)
-                                .FirstOrDefault();
+
+                var model = await _context.Mypays.ToListAsync();
+
+                var paytypes = await _context.MypayTypes
+                            .Select(p => new SelectListItem
+                            {
+                                Value = p.Id.ToString(),
+                                Text = p.MypayName
+                            })
+                            .ToListAsync();
+
+                foreach (var p in model)
+                {
+                    p.MypayName = paytypes
+                                    .Where(t => t.Value == p.SelectedMypaytypeId.ToString())
+                                    .Select(t => t.Text)
+                                    .FirstOrDefault();
+                }
+
+                model[0].Items = paytypes;
+
+                return View(model);
             }
-
-
-            model[0].Items = paytypes;
-
-            return View(model);
+            catch (Exception ex)
+            {
+                int statusCode = 400;
+                string? msg = ex.Message;
+                return RedirectToAction("Index", "Admin", new { statusCode, msg });
+            }
         }
 
         // GET: Mypays/Details/5
@@ -75,6 +84,7 @@ namespace MvcFreelan.Controllers
         {
             string userId = _userManager.GetUserId(User);
 
+            userId ??= "123";
 
             var paytypes = await _context.MypayTypes
                                     .Select(p => new SelectListItem

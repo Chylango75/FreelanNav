@@ -72,7 +72,8 @@ namespace MvcFreelan.Controllers
                     {
                         _context.Add(mypayType);
                         await _context.SaveChangesAsync();
-                        return RedirectToAction(nameof(Index));
+                        //return RedirectToAction(nameof(Index));
+                        return RedirectToAction("Index", "Mypays");
                     }
                 }
                 return View(mypayType);

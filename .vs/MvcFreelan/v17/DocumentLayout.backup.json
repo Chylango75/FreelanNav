@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "D:\\Dev\\Mvc\\MvcFreelan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Dev\\Mvc\\MvcFreelan\\Migrations\\20251013052658_add-mypay02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251013052658_add-mypay02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\controllers\\mypayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\mypayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\views\\mypays\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\mypays\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\models\\mypays\\mypay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:models\\mypays\\mypay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\models\\mypays\\mypaytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:models\\mypays\\mypaytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\views\\mypays\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:views\\mypays\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|d:\\dev\\mvc\\mvcfreelan\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A579DA-B9D0-476D-81C1-D8D33E5CC409}|MvcFreelan.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,66 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20251013052658_add-mypay02.cs",
-              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Migrations\\20251013052658_add-mypay02.cs",
-              "RelativeDocumentMoniker": "Migrations\\20251013052658_add-mypay02.cs",
-              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Migrations\\20251013052658_add-mypay02.cs",
-              "RelativeToolTip": "Migrations\\20251013052658_add-mypay02.cs",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T05:26:58.63Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-16T07:58:11.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvxoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T05:24:32.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MypayType.cs",
-              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Models\\Mypays\\MypayType.cs",
-              "RelativeDocumentMoniker": "Models\\Mypays\\MypayType.cs",
-              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Models\\Mypays\\MypayType.cs",
-              "RelativeToolTip": "Models\\Mypays\\MypayType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T05:21:17.852Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Mypays\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mypays\\Index.cshtml",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Mypays\\Index.cshtml",
+              "RelativeToolTip": "Views\\Mypays\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T07:57:33.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Mypay.cs",
-              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Models\\Mypays\\Mypay.cs",
-              "RelativeDocumentMoniker": "Models\\Mypays\\Mypay.cs",
-              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Models\\Mypays\\Mypay.cs",
-              "RelativeToolTip": "Models\\Mypays\\Mypay.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxkAAAAWAAAAAAAAAA==",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwJUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T05:13:27.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T04:49:36.999Z",
+              "WhenOpened": "2025-10-16T07:54:57.718Z",
               "EditorCaption": ""
             },
             {
@@ -113,22 +75,9 @@
               "RelativeDocumentMoniker": "Controllers\\MypaysController.cs",
               "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Controllers\\MypaysController.cs",
               "RelativeToolTip": "Controllers\\MypaysController.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAD4v2MAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAIwDsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T08:34:15.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Mypays\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Mypays\\Create.cshtml",
-              "ToolTip": "D:\\Dev\\Mvc\\MvcFreelan\\Views\\Mypays\\Create.cshtml",
-              "RelativeToolTip": "Views\\Mypays\\Create.cshtml",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswDsAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-10T08:31:11.124Z",
+              "WhenOpened": "2025-10-16T07:53:36.078Z",
               "EditorCaption": ""
             }
           ]
